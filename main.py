@@ -4,17 +4,18 @@ import json
 creds = {}
 execfile("credentials.conf",creds)
 
-print creds
-
+#basic example
 api = AnalyticsAPI(creds['username'],creds['password'])
 
 output = api.invoke("Company.GetReportSuites",{})
 
 obj = json.loads(output)
 
-#	print obj["report_suites"][0]
+print obj
 
-#Step 1 Get the Data 
+
+
+#example of a report
 reportDef = """
 {
 	"reportDescription":{
