@@ -2,7 +2,7 @@ import unittest
 from apiWrapper import *
 
 creds = {};
-execfile("credentials.conf",creds);
+execfile("credentials.conf", creds);
 
 class apiWrapperUnitTest(unittest.TestCase):
     def setUp(self):

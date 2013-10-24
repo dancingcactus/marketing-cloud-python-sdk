@@ -5,7 +5,7 @@ from datetime import datetime
 import time
 import requests
 
-class AnalyticsAPI:
+class AnalyticsAPI(object):
     """
     Class to interact with the API for Adobe Analytics
     """
@@ -16,8 +16,8 @@ class AnalyticsAPI:
     ENDPOINT_ERROR = "Invalid company specified."
     ENDPOINT_NO_COMPANY = "Company is a required parameter"
 
-    def __init__(self,username,password):
-        self.config(username,password)
+    def __init__(self, username, password):
+        self.config(username, password)
 
     def getUsername (self):
         return self.username
