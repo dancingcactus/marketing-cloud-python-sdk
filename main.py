@@ -18,32 +18,32 @@ print obj
 #example of a report
 reportDef = """
 {
-	"reportDescription":{
-		"reportSuiteID":"jjesquire2",
-		"dateFrom":"2013-05-01",
-		"dateTo":"2013-05-23",
-		"metrics":[
-			{
-				"id":"page_views"
-			},
-			{
-				"id":"visits"
-			},
-			{
-				"id":"visitors"
-			}
+    "reportDescription":{
+        "reportSuiteID":"jjesquire2",
+        "dateFrom":"2013-05-01",
+        "dateTo":"2013-05-23",
+        "metrics":[
+            {
+                "id":"page_views"
+            },
+            {
+                "id":"visits"
+            },
+            {
+                "id":"visitors"
+            }
 
-		],
-		"sortBy":"page_views",
-		"elements":[
-			{
-				"id":"evar1"
-			},
-			{
-				"id":"trackingcode"
-			}
-		]
-	}
+        ],
+        "sortBy":"page_views",
+        "elements":[
+            {
+                "id":"evar1"
+            },
+            {
+                "id":"trackingcode"
+            }
+        ]
+    }
 }
 """
-print api.invoke("Report.GetRankedReport",reportDef)
+print api.invoke("Report.GetRankedReport", reportDef)
