@@ -2,7 +2,6 @@
 import sys
 import ConfigParser
 
-
 class ApiCredentials(ConfigParser.ConfigParser):
     def __init__(self, config_file):
         ConfigParser.ConfigParser.__init__(self)
@@ -17,7 +16,8 @@ class ApiCredentials(ConfigParser.ConfigParser):
             try:
                 return self.get(config_section, config_key)
             except ConfigParser.NoOptionError, e:
-                return None
+                print 'Failed to retrive value for %s in section %s' % (config_key, config_section)
+                sys.exit(1)
 
     @property
     def webServicesUsername(self):
@@ -28,7 +28,4 @@ class ApiCredentials(ConfigParser.ConfigParser):
         return self.getConfigValue('Web Services', 'shared_secret')
 
     def getApiEndPoint(self, end_point_label):
-        if self.getConfigValue('API End Point', end_point_label) is not None:
-            return self.getConfigValue('API End Point', end_point_label)
-        else:
-            return self.default_api_end_point
+        return self.getConfigValue('API End Point', end_point_label)
