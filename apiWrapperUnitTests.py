@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import unittest
 from apiWrapper import *
 
@@ -41,5 +43,4 @@ class apiWrapperUnitTest(unittest.TestCase):
         self.assertTrue(self.api.invoke("Company.GetReportSuites",{}).find("error")<0)
 
 if __name__ == '__main__':
-    unittest.main();
-
+    unittest.main()

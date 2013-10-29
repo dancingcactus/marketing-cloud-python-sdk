@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from apiWrapper import AnalyticsAPI
 import json 
 
