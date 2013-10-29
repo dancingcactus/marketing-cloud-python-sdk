@@ -5,31 +5,20 @@ Wrapper for the Adobe Digital Marketing APIs in python (version 1.3)
 Steps to use
 ------
 
-* Install the Requests module for python
+Install Requests
+======
+Install the Requests module for Python
 
-Use pip
+* See instructions [here.](http://www.python-requests.org/en/latest/user/install/)
 
-```
-sudo pip install requests
-```
+Clone This Code
+======
+Git cloning instructions are [here.](http://git-scm.com/book/en/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository)
 
-easy_install [is not preferred](http://www.pip-installer.org/en/latest/other-tools.html#pip-compared-to-easy-install), but an option
+Populate Credentials File
+======
+The required Web Services section of the credentials file format has two elements, username and shared_secret.
 
-```
-sudo easy_install requests
-```
+The optional API End Point section should list with descriptive names the end points you will need.
 
-Or grab the source
-
-```
-    git clone git://github.com/kennethreitz/requests.git
-```
-
-Then install the source with
-
-
-```
-    python setup.py install
-```
-
-* Be sure to update the credentials.conf file with your username and shared secret.
+* A default API End Point is provided in the case that this section is empty.
