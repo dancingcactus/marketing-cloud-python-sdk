@@ -14,4 +14,7 @@ Steps to use
 ```
     python setup.py install
 ```
+
 * Be sure to update the credentials.conf file with your username and shared secret.
+* main.py has a really simple example of how to use the API. 
+
